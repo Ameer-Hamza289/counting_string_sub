@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counting</title>
+</head>
+<body>
+    <!-- Let's make it little bit difficult, search for a complete word, For example 
+In a sentence like "I'm a student of education university, and it's really good institute" 
+program will find word(s) like "and" or "and it", basically any substring should be counted.
+ Whether it's complete word or not.  -->
+
+ <p>You can check the number of times the character or word appeared in the Paragraph</p>
+    
+    <label for="text">Paragraph</label>
+    <input type="text" id="input1" >
+    <label for="text">Character</label>
+    <input type="text" id="input2" >
+    <button onclick="check()">Check</button>
+
+
+    <script>
+
+        function check(){
+            var p=document.getElementById("input1").value;
+            var c=document.getElementById("input2").value;
+            var count = 0;
+        
+
+
+//running code tells exactly the number of times a word is repeating
+            let par=p.split(" ");
+            // console.log(par);
+            // let ch=c.split(" ");
+            // console.log(ch);
+           
+            // let count=0;
+            for(let i=0;i<par.length;i++){
+                if(par[i].match(c)){
+                    count++;
+                }
+            }
+            console.log(count); 
+
+
+
+
+        }
+    </script>
+
+
+</body>
+</html>
